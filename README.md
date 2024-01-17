@@ -1,15 +1,13 @@
 # mega-minecraft
 megabrain minecraft server
 
+# if you are Player
 read this.
-- [itzg/docker-minecraft-server](https://github.com/itzg/docker-minecraft-server)
-
-# Player
-## install mode
+## install modes
 ```shell
 # mac version
 cd ~/.minecraft/mods
-while IFS= read -r line
+while IFS = read -r line
 do
   line=$(echo $line | sed -e 's/#.*//') # remove comments
   if [ ! "$line" ]; then continue; fi # skip empty lines
@@ -17,10 +15,12 @@ do
 done < "mods.txt"
 ```
 
-# Server Owner
+# if you are Server Owner
+read this.
+- [itzg/docker-minecraft-server](https://github.com/itzg/docker-minecraft-server)
 
 ## run minecraft server detached mode
-```shell
+```shell 
 docker compose up -d
 ```
 
